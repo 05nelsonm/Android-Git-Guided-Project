@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_edit_book.*
 
 /*
@@ -52,14 +53,18 @@ class EditBookActivity : AppCompatActivity() {
         // todo 5: Commit our changes with a good commit message
         // todo 6: Merge with development and open a pull-request
         val bookName = book_name_text.text.toString()
-        val bookReason = book_reason_text.text.toString()
-        val hasBeenRead = read_switch.isChecked
-        val book = Book(id!!, bookName, bookReason, hasBeenRead)
-        val bookCsv = book.toCsvString()
-        val intent = Intent()
-        intent.putExtra(Constants.EDIT_BOOK_TAG, bookCsv)
-        setResult(RESULT_OK, intent)
-        finish()
+        if (bookName.isNotEmpty()) {
+            val bookReason = book_reason_text.text.toString()
+            val hasBeenRead = read_switch.isChecked
+            val book = Book(id!!, bookName, bookReason, hasBeenRead)
+            val bookCsv = book.toCsvString()
+            val intent = Intent()
+            intent.putExtra(Constants.EDIT_BOOK_TAG, bookCsv)
+            setResult(RESULT_OK, intent)
+            finish()
+        } else {
+            Toast.makeText(this, "Books require a title", Toast.LENGTH_SHORT).show()
+        }
     }
 
     private fun cancel() {
