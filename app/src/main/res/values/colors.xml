@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- todo 7: In a separate branch, update the color scheme of the app -->
-    <!-- todo 8: Open a pull request for this update too --> 
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+	<!-- todo 7: In a separate branch, update the color scheme of the app -->
+	<!-- todo 8: Open a pull request for this update too -->
+	<color name="colorPrimary">#8e24aa</color>
+	<color name="colorPrimaryDark">#5c007a</color>
+	<color name="colorAccent">#1976d2</color>
+
+	<color name="primaryColor">#8e24aa</color>
+	<color name="primaryLightColor">#c158dc</color>
+	<color name="primaryDarkColor">#5c007a</color>
+	<color name="secondaryColor">#1976d2</color>
+	<color name="secondaryLightColor">#63a4ff</color>
+	<color name="secondaryDarkColor">#004ba0</color>
+	<color name="primaryTextColor">#ffffff</color>
+	<color name="secondaryTextColor">#ffffff</color>
 </resources>
